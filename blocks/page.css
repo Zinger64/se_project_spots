@@ -1,4 +1,11 @@
 .page {
   background-color: #fcf5e5;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.page__section {
+  max-width: 1280px;
 }
