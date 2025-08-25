@@ -6,9 +6,9 @@
 - Figma
 - Images
 
-**Intro**
+**Description**
 
-This is the first stage of the third project of the fulltime Software Engineering program at TripleTen. It was created using HTML and CSS, based on the design as shown in Figma and per project specifications provided by Tripleten.
+This is the third project of the fulltime Software Engineering program at TripleTen. It was created using HTML and CSS, based on the design as shown in Figma and per project specifications provided by Tripleten.
 
 Project features:
 
@@ -28,6 +28,8 @@ All images have been optimized using https://tinypng.com/.
 
 ![Screenshot of the project webpage](images/spots-webpage.png)
 
+![Screenshot of the project webpage](images/spots-mobile.png)
+
 **GitHub**
 
-Link to project on GitHub Pages:
+Link to deployed project on GitHub Pages: https://zinger64.github.io/se_project_spots/index.html
