@@ -1,3 +1,5 @@
+.card {
+}
 .card__image {
   display: block;
   height: 413px;
@@ -51,5 +53,6 @@
   }
   .card__title {
     max-width: 260px;
+    font-size: 20px;
   }
 }
