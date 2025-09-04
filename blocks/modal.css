@@ -47,8 +47,6 @@
 .modal__form {
   display: flex;
   flex-direction: column;
-
-
 }
 
 .modal__label {
@@ -83,8 +81,8 @@
   font-weight: 500;
   margin: 0;
   border: none;
-  }
-  .modal__submit-btn:hover {
+}
+.modal__submit-btn:hover {
   opacity: 80%;
 }
 
@@ -103,20 +101,16 @@
   .modal__input {
     font-size: 16px;
     box-sizing: border-box;
-
-
-   }
+  }
   .modal__label {
     margin: 0 0 24px;
-
   }
   .modal__container {
     padding: 24px 12px;
     max-width: 603px;
-
   }
   .modal__close-btn {
-      top: 12px;
-  right: 12px;
-
+    top: 12px;
+    right: 12px;
+  }
 }
