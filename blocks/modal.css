@@ -29,6 +29,27 @@
   position: relative;
 }
 
+.modal__image-container {
+  position: relative;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  color: white;
+  font-size: 20px;
+  margin: 4px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
 .modal__title {
   margin: 0 0 32px;
   font-size: 32px;
@@ -46,6 +67,16 @@
 }
 .modal__close-btn:hover {
   opacity: 100%;
+}
+
+.modal__close-btn_type_preview {
+  top: 0;
+  right: -52.5px;
+  opacity: 100%;
+}
+
+.modal__close-btn_type_preview:hover {
+  filter: brightness(0.6);
 }
 
 .modal__form {
@@ -117,4 +148,8 @@
     top: 12px;
     right: 12px;
   }
-}
+  .modal__close-btn_type_preview {
+    top: -48px;
+    right: 0px;
+  }
+
