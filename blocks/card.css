@@ -26,6 +26,7 @@
   opacity: 40%;
   background-color: transparent;
   display: inline-block;
+  cursor: pointer;
 }
 .card__like-btn:hover {
   opacity: 100%;
@@ -48,9 +49,7 @@
   top: 10px;
   right: 10px;
   background-color: transparent;
-}
-.card__delete-btn:hover {
-  background-image: url(../images/delete-Hover.svg);
+  cursor: pointer;
 }
 .card__delete-btn:hover {
   background-image: url(../images/delete-Hover.svg);

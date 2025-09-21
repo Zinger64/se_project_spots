@@ -93,7 +93,6 @@ function getCardElement(data) {
   if (cardDeleteBtnEl) {
     cardDeleteBtnEl.addEventListener("click", () => {
       cardElement.remove();
-      cardElement = null;
     });
   }
   return cardElement;
@@ -137,13 +136,6 @@ function handleProfileFormSubmit(evt) {
 }
 
 editProfileFormEl.addEventListener("submit", handleProfileFormSubmit);
-
-function handleAddCardSubmit(evt) {
-  evt.preventDefault();
-  console.log(newPostImageInput.value);
-  console.log(newPostCaptionInput.value);
-  closeModal(newPostModal);
-}
 
 newPostFormEl.addEventListener("submit", function (evt) {
   evt.preventDefault();

@@ -25,7 +25,6 @@
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
-  text-wrap-mode: ;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -53,6 +52,7 @@
   border: none;
   background: none;
   opacity: 100%;
+  cursor: pointer;
 }
 .profile__edit-btn:hover {
   opacity: 40%;
@@ -67,6 +67,7 @@
   align-self: flex-end;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 .profile__add-btn:hover {
   opacity: 80%;
