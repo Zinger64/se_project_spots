@@ -75,7 +75,7 @@
             <img src="./images/close-icon.svg" alt="close icon" />
           </button>
           <h2 class="modal__title">Edit profile</h2>
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label"
               >Name
               <input
@@ -84,7 +84,13 @@
                 class="modal__input"
                 placeholder="Type your name"
                 required
+                minlength="2"
+                maxlength="40"
               />
+              <span
+                id="profile-name-input-error"
+                class="modal__error_visible"
+              ></span>
             </label>
             <label for="profile-description-input" class="modal__label"
               >Description
@@ -94,7 +100,13 @@
                 class="modal__input"
                 placeholder="Describe yourself"
                 required
+                minlength="2"
+                maxlength="200"
               />
+              <span
+                id="profile-description-input-error"
+                class="modal__error_visible"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -106,7 +118,7 @@
             <img src="./images/close-icon.svg" alt="close icon" />
           </button>
           <h2 class="modal__title">New post</h2>
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <label for="card-image-input" class="modal__label"
               >Image link
               <input
@@ -116,6 +128,10 @@
                 placeholder="Paste a link to the picture"
                 required
               />
+              <span
+                id="card-image-input-error"
+                class="modal__error_visible"
+              ></span>
             </label>
             <label for="card-description-input" class="modal__label"
               >Caption
@@ -125,7 +141,13 @@
                 class="modal__input"
                 placeholder="Type your caption"
                 required
+                minlength="2"
+                maxlength="30"
               />
+              <span
+                id="card-description-input-error"
+                class="modal__error_visible"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -144,6 +166,7 @@
         </div>
       </div>
     </div>
+    <script src="./scripts/validation.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

@@ -51,6 +51,7 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
 const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
+const newPostSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 const newPostFormEl = newPostModal.querySelector(".modal__form");
 const newPostImageInput = newPostFormEl.querySelector("#card-image-input");
 const newPostCaptionInput = newPostFormEl.querySelector(
@@ -98,17 +99,45 @@ function getCardElement(data) {
   return cardElement;
 }
 
+// Named function for escape key handling (so it can be removed later)
+function handleEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_is-opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  // Add escape key listener when modal opens
+  document.addEventListener("keydown", handleEscapeKey);
 }
+
+const modals = document.querySelectorAll(".modal");
+modals.forEach((modal) => {
+  modal.addEventListener("click", function (evt) {
+    if (evt.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
+  });
+});
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  // Remove escape key listener when modal closes
+  document.removeEventListener("keydown", handleEscapeKey);
 }
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  resetValidation(
+    editProfileFormEl,
+    [editProfileNameInput, editProfileDescriptionInput],
+    settings
+  );
   openModal(editProfileModal);
 });
 
@@ -147,7 +176,7 @@ newPostFormEl.addEventListener("submit", function (evt) {
   cardsList.prepend(card);
 
   newPostFormEl.reset();
-
+  disableButton(newPostSubmitBtn, settings);
   closeModal(newPostModal);
 });
 
@@ -155,3 +184,6 @@ initialCards.forEach(function (item) {
   const card = getCardElement(item);
   cardsList.append(card);
 });
+
+// Initialize validation
+enableValidation(settings);
