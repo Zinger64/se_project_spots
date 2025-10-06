@@ -12,7 +12,9 @@
 .card__content {
   margin-top: 12px;
   max-width: 413px;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card__like-btn {
