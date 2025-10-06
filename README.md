@@ -32,4 +32,4 @@ All images have been optimized using https://tinypng.com/.
 
 **GitHub**
 
-Link to deployed project on GitHub Pages: https://zinger64.github.io/se_project_spots/index.html
+Link to deployed project on GitHub Pages: https://dkraus-sofeng.github.io/se_project_spots/index.html
