@@ -107,9 +107,6 @@ class Api {
     }
     return Promise.reject(`Error: ${res.status}`);
   }
-
-  // other methods f
-  // or working with the API
 }
 
 export default Api;
